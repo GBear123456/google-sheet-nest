@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { GoogleSheetModule } from './tools/google-sheet/google-sheet.module';
 
 @Module({
-  imports: [],
+  imports: [GoogleSheetModule],
   controllers: [AppController],
   providers: [AppService],
 })
